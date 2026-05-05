@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Work - my matrix website</title>
+</head>
+<body>
+  <canvas id="Matrix"></canvas>
+  <script src="index.js"></script>
+  <script src="work.js"></script>
+
+  <div class="header">
+    <div class="button-panel">
+      <div class="menu-item"><a href="index.html">HOME</a></div>
+      <div class="menu-item"><a href="about.html">ABOUT</a></div>
+      <div class="menu-item"><a href="work.html">WORK</a></div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h1>Portfolio</h1>
+    
+    <!-- Filter Buttons -->
+    <div class="filter-controls">
+      <button class="filter-btn active" onclick="filter('all')">All</button>
+      <button class="filter-btn" onclick="filter('graphic')">Graphic Design</button>
+      <button class="filter-btn" onclick="filter('art')">Art Work</button>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+      <div class="gallery-item art" onclick="toggleExpand(this)">
+        <img src="img1.jpg" alt="Art Work 1">
+        <div class="item-overlay">Click to expand</div>
+      </div>
+      <div class="gallery-item graphic" onclick="toggleExpand(this)">
+        <img src="img2.jpg" alt="Graphic Design 2">
+        <div class="item-overlay">Click to expand</div>
+      </div>
+      <div class="gallery-item art" onclick="toggleExpand(this)">
+        <img src="img3.jpg" alt="Art Work 1">
+        <div class="item-overlay">Click to expand</div>
+      </div>
+      <div class="gallery-item art" onclick="toggleExpand(this)">
+        <img src="img4.jpg" alt="Art Work 2">
+        <div class="item-overlay">Click to expand</div>
+      </div>
+      <div class="gallery-item graphic" onclick="toggleExpand(this)">
+        <img src="img5.png" alt="Graphic Design 3">
+        <div class="item-overlay">Click to expand</div>
+      </div>
+      <div class="gallery-item art" onclick="toggleExpand(this)">
+        <img src="img6.jpg" alt="Art Work 3">
+        <div class="item-overlay">Click to expand</div>
+      </div>
+      <div class="gallery-item art" onclick="toggleExpand(this)">
+        <img src="img7.jpg" alt="Art Work 4">
+        <div class="item-overlay">Click to expand</div>
+      </div>
+      <div class="gallery-item art" onclick="toggleExpand(this)">
+        <img src="img8.JPG" alt="Art Work 5">
+        <div class="item-overlay">Click to expand</div>
+      </div>
+      <div class="gallery-item art" onclick="toggleExpand(this)">
+        <img src="img9.JPG" alt="Art Work 6">
+        <div class="item-overlay">Click to expand</div>
+      </div>
+      <div class="gallery-item graphic" onclick="toggleExpand(this)">
+        <img src="img10.jpg" alt="Graphic Design 3">
+        <div class="item-overlay">Click to expand</div>
+      </div>
+      <div class="gallery-item graphic" onclick="toggleExpand(this)">
+        <img src="img11.jpg" alt="Graphic Design 4">
+        <div class="item-overlay">Click to expand</div>
+      </div>
+    </div>
+
+    <!-- Expanded View Modal -->
+    <div id="expandedModal" class="expanded-modal hidden">
+      <div class="expanded-content">
+        <span class="close-btn" onclick="closeExpanded()">&times;</span>
+        <img id="expandedImage" src="" alt="Expanded view">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const currentPage = window.location.href.split('/').pop() || 'index.html';
+    const links = document.querySelectorAll('.menu-item a');
+    links.forEach(link => {
+      const linkPage = link.getAttribute('href');
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+<div class ="footer">
+  <p>&copy; 2026 Joseph's Portfolio. All rights reserved.</p>
+</div>
+</body>
+</html>

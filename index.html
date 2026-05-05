@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>my matrix website</title>
+</head>
+<body>
+  <canvas id="Matrix"></canvas>
+    <script src="index.js"></script>
+
+    <div class="header">
+      <div class="button-panel">
+        <div class="menu-item"><a href="index.html">HOME</a></div>
+        <div class="menu-item"><a href="about.html">ABOUT</a></div>
+        <div class="menu-item"><a href="work.html">WORK</a></div>
+      </div>
+    </div>
+
+    <div class="content">
+        <h1 class="name">JOSEPH'S PORTFOLIO</h1>
+        <h2 class="title">Digital design</h2>
+        <h3 class="tagline">Purpose</h3>
+        <p class="bio">This website showcases my work in digital design during my study at whitecliffe college, with a strong focus on visual identity, layout, and interaction. This website is presented in a way that explores how design can create engaging and user-friendly digital experiences and has been designed to balance aesthetics with usability, allowing users to easily navigate and interact with the content.</p>
+    </div>
+
+  <div class="boxes-container">
+  <a href="about.html" class="box box-left">
+      <img src="profile-pic.png" alt="Profile Picture" class="box-image">
+      <h3>About Me</h3>
+      <p>Click here to learn more about me and my contact information.</p>
+  </a>
+
+  <a href="work.html" class="box box-right">
+      <img src="suitcase-icon.png" alt="Work Portfolio" class="box-image">
+      <h3>Work</h3>
+      <p>Click here to explore my portfolio and projects.</p>
+  </a>
+</div>
+
+  <script>
+    const currentPage = window.location.href.split('/').pop() || 'index.html';
+    const links = document.querySelectorAll('.menu-item a');
+    links.forEach(link => {
+      const linkPage = link.getAttribute('href');
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+
+
+<div class ="footer">
+  <p>&copy; 2026 Joseph's Portfolio. All rights reserved.</p>
+</div>
+</body>
+</html>
+
+
+
+  
