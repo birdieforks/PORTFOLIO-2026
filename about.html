@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>About - my matrix website</title>
+</head>
+<body>
+  <canvas id="Matrix"></canvas>
+  <script src="index.js"></script>
+
+  <div class="header">
+    <div class="button-panel">
+      <div class="menu-item"><a href="index.html">HOME</a></div>
+      <div class="menu-item"><a href="about.html">ABOUT</a></div>
+      <div class="menu-item"><a href="work.html">WORK</a></div>
+    </div>
+  </div>
+
+  <div class="content about-content">
+    <div class="about-container">
+      <div class="about-text">
+        <h1>Joseph</h1>
+        <p class="about-bio">
+          I'm a creative professional and student at Whitecliffe College, passionate about creating compelling visual work across multiple disciplines. My work spans graphic design and creating art, where I focus on bringing my strange ideas to life through aesthetic design and authentic visual storytelling. I specialize in creating engaging visual experiences that communicate effectively or abstractly and leave a lasting impression. Whether through bold graphic designs, atmospheric aesthetic artwork, or innovative creative solutions, I'm dedicated to delivering high-quality work that pushes creative boundaries and meets my clients objectives.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="pfp.png" alt="Joseph's Profile">
+      </div>
+    </div>
+
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <p><strong>Email:</strong> <a href="mailto:josephelt1@gmail.com">josephelt1@gmail.com</a></p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/josephelt" target="_blank">@josephelt</a></p>
+      <a href="work.html" class="cta-button">Click Here to View My Work</a>
+    </div>
+  </div>
+
+  <script>
+    const currentPage = window.location.href.split('/').pop() || 'index.html';
+    const links = document.querySelectorAll('.menu-item a');
+    links.forEach(link => {
+      const linkPage = link.getAttribute('href');
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+<div class ="footer">
+  <p>&copy; 2026 Joseph's Portfolio. All rights reserved.</p>
+</div>
+</body>
+</html>
